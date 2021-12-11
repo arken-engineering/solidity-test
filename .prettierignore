@@ -1,0 +1,14 @@
+node_modules
+build
+typechain
+
+#Hardhat files
+cache
+artifacts
+factories
+coverage
+
+# Yarn files
+yarn-error.log
+
+.env
