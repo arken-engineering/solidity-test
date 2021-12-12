@@ -38,8 +38,8 @@ describe("TokenDecoder", () => {
             result.item.should.equal(expected.item, "Item")
             result._type.should.equal(expected._type, "Type")
             result.attributeCount.should.equal(expected.attributeCount, "Attribute count")
-            result.attributeTypes.should.have.same.members(expected.attributeTypes, "Attribute types")
-            result.attributeValues.should.have.same.members(expected.attributeValues, "Attribute values")
+            result.attributeTypes.should.have.same.ordered.members(expected.attributeTypes, "Attribute types")
+            result.attributeValues.should.have.same.ordered.members(expected.attributeValues, "Attribute values")
 
             const gas = (await tokenDecoderContract.estimateGas.decodeRuneword(expected.token)).toNumber()
             totalGas += gas
